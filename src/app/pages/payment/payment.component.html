@@ -1,0 +1,55 @@
+<div class="payment-form">
+    <h2>Payment Form</h2>
+    <form (ngSubmit)="submitPaymentForm()">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" placeholder="Enter first name" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" placeholder="Enter last name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter email address" required>
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="tel" id="phoneNumber" placeholder="Enter phone number" required>
+      </div>
+      <div class="form-group">
+        <label for="cardNumber">Card Number</label>
+        <input type="text" id="cardNumber" placeholder="Enter card number" required>
+      </div>
+      <div class="form-group">
+        <label for="expiryDate">Expiry Date</label>
+        <input type="text" id="expiryDate" placeholder="MM/YY" required>
+      </div>
+      <div class="form-group">
+        <label for="cardHolder">Card Holder</label>
+        <input type="text" id="cardHolder" placeholder="Enter card holder's name" required>
+      </div>
+      <div class="form-group">
+        <label for="cvc">CVC</label>
+        <input type="text" id="cvc" placeholder="Enter CVC" required>
+      </div>
+      <div class="form-group">
+        <label for="postalCode">Postal Code</label>
+        <input type="text" id="postalCode" placeholder="Enter postal code" required>
+      </div>
+      <div class="form-group">
+        <label for="paymentDate">Date of Payment</label>
+        <input type="date" id="paymentDate" required>
+      </div>
+      <div class="form-group">
+        <button type="submit" (click)="showSuccessMessage()">Submit Payment</button>
+      </div>
+      <div class="overlay" *ngIf="showSuccess">
+        <div class="popup">
+          <p>Payment successfully completed!</p>
+          <button class="close-button" (click)="closeSuccessMessage()">Close</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  

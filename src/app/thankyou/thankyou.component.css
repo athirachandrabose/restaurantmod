@@ -1,0 +1,103 @@
+.thank-you-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .thank-you-container h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .thank-you-container p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .thank-you-container .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .thank-you-container label {
+    display: block;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .thank-you-container .star-rating {
+    display: inline-block;
+  }
+  
+  .thank-you-container .star-rating input {
+    display: none;
+  }
+  
+  .thank-you-container .star-rating label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .thank-you-container .star-rating label:before {
+    content: '\2605';
+  }
+  
+  .thank-you-container .star-rating input:checked ~ label {
+    color: #ffd700;
+  }
+  
+  .thank-you-container textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .thank-you-container button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .thank-you-container button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  .thank-you-container button[type="submit"]:focus {
+    outline: none;
+  }
+  .thank-you-container .star-rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .thank-you-container .star-rating input {
+    display: none;
+  }
+  
+  .thank-you-container .star-rating label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-right: 5px;
+  }
+  
+  .thank-you-container .star-rating label:before {
+    content: '\2605';
+  }
+  
+  .thank-you-container .star-rating input:checked ~ label {
+    color: #ffd700;
+  }
+  

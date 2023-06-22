@@ -1,0 +1,114 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair:ital,wght@1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="banner">
+    <div class="content">
+        <h1 class="mb-5">Discover a World <BR>of Culinary Wonders</h1>
+  </div>
+</div>
+<!--about-->
+<div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
+    
+    <img src="assets/images/abouts.jpg" style="width:100%" class="w3-margin-top w3-margin-bottom" width="500px" height="500px" alt="Restaurant">
+    <h1><b>Opening Hours</b></h1>
+    
+    <div class="w3-row">
+      <div class="w3-col s6">
+        <p>Mon & Tue CLOSED</p>
+        <p>Wednesday 10.00 - 24.00</p>
+        <p>Thursday 10:00 - 24:00</p>
+      </div>
+      <div class="w3-col s6">
+        <p>Friday 10:00 - 12:00</p>
+        <p>Saturday 10:00 - 23:00</p>
+        <p>Sunday Closed</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+<hr>
+
+  <!--GALLERY-->
+  <div id="gallery">
+    <table  >
+       
+        <tr>
+            <th ><img class=" gallery-image" src="../../../assets/images/food-20.webp" height="260px" width="290px"></th>
+            <th ><img class=" gallery-image" src="../../../assets/images/food-10.jpeg" height="260px" width="290px"></th>
+            <th ><img  class=" gallery-image" src="../../../assets/images/food-11.jpeg" height="260px" width="290px"></th>
+            <th ><img class=" gallery-image" src="../../../assets/images/food-12.jpeg" height="260px" width="290px"></th>
+        </tr>
+        <tr>
+            <td><img  class=" gallery-image"  src="../../../assets/images/food-13.jpg"  height="260px" width="290px"></td>
+            <td ><img  class=" gallery-image" src="../../../assets/images/food-14.webp" height="260px" width="290px"></td>
+            <td ><img  class=" gallery-image" src="../../../assets/images/food-15.jpeg" height="260px" width="290px"></td>
+            <td ><img  class=" gallery-image" src="../../../assets/images/food-16.jpeg" height="260px" width="290px"></td>
+        </tr>  
+        <tr>
+          <td><img  class=" gallery-image"  src="../../../assets/images/food-17.jpeg"  height="260px" width="290px"></td>
+          <td ><img  class=" gallery-image" src="../../../assets/images/food-18.jpeg" height="260px" width="290px"></td>
+          <td ><img  class=" gallery-image" src="../../../assets/images/food-19.jpeg" height="260px" width="290px"></td>
+          <td ><img  class=" gallery-image" src="../../../assets/images/food-9.jpeg" height="260px" width="290px"></td>
+      </tr>  
+    </table>
+    </div>
+  <!--contact-->
+  <div class="contact-container">
+    <!-- <div class="contact-details" id="contact">
+      <h2>Contact Us</h2>
+      <p>Restaurant Name</p>
+      <p>Address</p>
+      <p>Phone Number</p>
+      <p>Email</p>
+      <p>Website</p>
+    </div>
+    <div class="message-section">
+      <h2>Engage with Us and Discover a World of Flavor</h2>
+      <form (submit)="sendMessage()">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" [(ngModel)]="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" [(ngModel)]="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" [(ngModel)]="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div> -->
+    <div class="contact-details" id="contact">
+      <h2>Contact Us</h2>
+      <div class="contact-info">
+        <p class="info-item"><span class="label">Restaurant Name:</span> Restaurant Name</p>
+        <p class="info-item"><span class="label">Address:</span> Address</p>
+        <p class="info-item"><span class="label">Phone Number:</span> Phone Number</p>
+        <p class="info-item"><span class="label">Email:</span> Email</p>
+        <p class="info-item"><span class="label">Website:</span> Website</p>
+      </div>
+    </div>
+    
+  </div>
+ 
+ 
+<!-- foodbox  -->
+<!-- <div class="container mt-4 mb-4">
+    <h1 class="text-center"><b>Customers Favourites Food</b></h1>
+    <div class="row">
+        <div class="col-lg-3 mt-3" *ngFor="let fd of foodData;index as i">
+            <div class="foodbox" *ngIf="i<=3">
+                <img src="{{fd.foodImg}}" />
+                <h1>{{fd.foodName}}</h1>
+                <p>{{fd.foodPrice | currency:'INR'}}</p>
+            </div>
+        </div>
+    </div> -->
+    <!-- <a routerLink="menu" class="viewmorebtn">view more <i class="bi bi-arrow-right"></i></a>
+</div>  -->
