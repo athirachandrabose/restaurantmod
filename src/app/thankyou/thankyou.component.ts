@@ -19,18 +19,30 @@ export class ThankyouComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const state = this.route.snapshot?.data?.['state'];
-    if (state && state.orderedItems) {
-      this.orderedItems = state.orderedItems;
+    const state = window.history.state;
+    if (state && state.cartItems) {
+      this.orderedItems = state.cartItems;
     }
   }
+  rateItem(item: { rating: any; }, rating: any) {
+    item.rating = rating;
+  }
+  
+  
   submitRatingForm() {
-    if (this.ratingForm.valid) {
-      // Perform any necessary actions with the form data
-      console.log(this.ratingForm.value);
+    // if (this.ratingForm.valid) {
+    //   // Perform any necessary actions with the form data
+    //   console.log(this.ratingForm.value);
 
-      // Reset the form
-      this.ratingForm.reset();
-    }
+    //   // Reset the form
+    //   this.ratingForm.reset();
+    // }
+    this.router.navigate(['/home'])
+  
+  }
+  isCardFlipped: boolean = false;
+
+  flipCard() {
+    this.isCardFlipped = !this.isCardFlipped;
   }
 }

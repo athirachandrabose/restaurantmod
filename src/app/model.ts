@@ -2,7 +2,7 @@ export interface CartItem {
   item: MenuItem;
   quantity: number;
   price: number;
-
+  // rating:number;
  
 }
 

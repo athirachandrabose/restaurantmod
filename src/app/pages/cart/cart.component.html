@@ -17,7 +17,7 @@
       </li>
     </ul>
     <div *ngIf="cartItems.length > 0">
-      <p>Total: {{ calculateTotalPrice() | currency }}</p>
+      <p>Total Amount: {{ totalAmount | currency }}</p>
       <!-- Add more elements or functionality as needed -->
     </div>
     <div *ngIf="cartItems.length === 0">

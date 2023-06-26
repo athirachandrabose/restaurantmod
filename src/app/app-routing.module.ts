@@ -12,9 +12,7 @@ import { ThankyouComponent } from './thankyou/thankyou.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'signup', component: SignupComponent },
-  { path: 'reset-password', component: ResetPasswordComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'menu' , component: MenuComponent},
   { path: 'cart' , component: CartComponent},
   {path:'payment', component:PaymentComponent},

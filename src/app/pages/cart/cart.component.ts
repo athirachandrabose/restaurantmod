@@ -67,12 +67,14 @@ export class CartComponent {
 })
 export class CartComponent {
   cartItems: CartItem[] = []; // Array to store cart items
- 
+  paymentCartItems: CartItem[] = [];
+  totalAmount: number = 0;
   constructor(private cartService: CartService,private router: Router) { }
 
   ngOnInit(): void {
     this.cartService.cartItems$.subscribe(items => {
       this.cartItems = items;
+      this.calculateTotalAmount();
     });
   }
 
@@ -81,11 +83,12 @@ export class CartComponent {
     const index = this.cartItems.indexOf(item);
     if (index !== -1) {
       this.cartItems.splice(index, 1);
+      this.calculateTotalAmount();
     }
   }
 
-  calculateTotalPrice(): number {
-    return this.cartItems.reduce((total, cartItem) => total + (cartItem.price * cartItem.quantity), 0);
+  calculateTotalAmount() {
+    this.totalAmount = this.cartItems.reduce((total, cartItem) => total + cartItem.price, 0);
   }
  
   increaseQuantity(item: CartItem): void {
@@ -105,7 +108,7 @@ export class CartComponent {
     this.router.navigate(['/menu']); 
 }
 pay(): void {
-  this.router.navigate(['/payment']);
+  this.router.navigateByUrl('/payment', { state: { cartItems: this.cartItems } });
 }
 
 

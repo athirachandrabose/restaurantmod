@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { MenuItem } from '../pages/menu/menu.component';
 // import { MenuItem } from './menu.component';
@@ -18,13 +19,16 @@ export class CartService {
   cartItems$ = this.cartItemsSubject.asObservable();
   private cartItems: CartItem[] = [];
   private storageKey = 'cartItems';
-  constructor() {  const cartData = localStorage.getItem('cart');
+  constructor(private router:Router) {  const cartData = localStorage.getItem('cart');
   const storedItems = localStorage.getItem(this.storageKey);
   if (storedItems) {
     this.cartItems = JSON.parse(storedItems);
   }}
   getCartItems(): CartItem[] {
     return this.cartItems;
+  }
+  calculateTotalAmount(): number {
+    return this.cartItems.reduce((total, cartItem) => total + cartItem.price, 0);
   }
  
   // addToCart(item: CartItem): void {
@@ -80,5 +84,8 @@ export class CartService {
   }
   clearCart(): void {
     this.items = []; // Remove all items from the cart
+  }
+  submitPaymentForm() {
+    this.router.navigateByUrl('/payment');
   }
 }
